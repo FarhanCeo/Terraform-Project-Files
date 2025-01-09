@@ -1,0 +1,2 @@
+terraform init
+terraform apply -var-file="file1.tfvars"

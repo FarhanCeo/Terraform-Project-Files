@@ -14,4 +14,8 @@ Resources for a vm:
 
 
 
-test
+How to access secrets:
+In workflow yaml file: secrets.<name>
+
+Variables
+In Terraform files: var.<name>

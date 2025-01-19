@@ -33,7 +33,8 @@ jobs:
           --username "${{ secrets.clientID }}" \
           --password "${{ secrets.clientSecret }}" \
           --tenant "${{ secrets.tenantID }}"
-
+          
+        echo "Check subscription"
         # Set the subscription context
         az account set --subscription "${{ secrets.subscriptionID }}"
 

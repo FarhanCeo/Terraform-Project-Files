@@ -44,16 +44,16 @@ jobs:
 
     # Step 4: Initialize Terraform
     - name: Terraform Init
-      working-directory: GithubAction-terrafrom
+      working-directory: ResourceGroup
       run: terraform init
 
     # Step 5: Run Terraform Plan
     - name: Terraform Plan
-      working-directory: GithubAction-terrafrom
+      working-directory: ResourceGroup
       run: terraform plan
 
     # Step 6: Apply Terraform Changes (run only on main branch)
     - name: Terraform Apply
-      working-directory: GithubAction-terrafrom
+      working-directory: ResourceGroup
       run: terraform apply -auto-approve
       if: github.ref == 'refs/heads/main'

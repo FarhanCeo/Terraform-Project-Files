@@ -28,6 +28,7 @@ jobs:
     - name: Set up Azure credentials
       run: |
         # Configure Azure CLI to use the secrets stored in GitHub Secrets
+        ls
         echo "Setting up Azure CLI credentials"
         az login --service-principal \
           --username "${{ secrets.CLIENTID }}" \

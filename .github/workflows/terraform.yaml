@@ -30,13 +30,13 @@ jobs:
         # Configure Azure CLI to use the secrets stored in GitHub Secrets
         echo "Setting up Azure CLI credentials"
         az login --service-principal \
-          --username "${{ secrets.clientID }}" \
-          --password "${{ secrets.clientSecret }}" \
-          --tenant "${{ secrets.tenantID }}"
+          --username "${{ secrets.CLIENTID }}" \
+          --password "${{ secrets.CLIENTSECRET }}" \
+          --tenant "${{ secrets.TENANTID }}"
           
         echo "Check subscription"
         # Set the subscription context
-        az account set --subscription "${{ secrets.subscriptionID }}"
+        az account set --subscription "${{ secrets.SUBSCRIPTIONID }}"
 
     # Step 4: Initialize Terraform
     - name: Terraform Init

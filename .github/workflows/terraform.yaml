@@ -29,6 +29,9 @@ jobs:
       run: |
         # Configure Azure CLI to use the secrets stored in GitHub Secrets
         ls
+        cd GithubAction-terrafrom
+        pwd
+        ls
         echo "Setting up Azure CLI credentials"
         az login --service-principal \
           --username "${{ secrets.CLIENTID }}" \

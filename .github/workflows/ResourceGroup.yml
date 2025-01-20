@@ -1,4 +1,4 @@
-name: Terraform CI/CD Pipeline
+name: ResourceGroup workflow
 
 on:
   push:
@@ -50,7 +50,7 @@ jobs:
     # Step 5: Run Terraform Plan
     - name: Terraform Plan
       working-directory: ResourceGroup
-      run: terraform plan
+      run: terraform plan -var-file="ResourceGroup.tfvars"
 
     # Step 6: Apply Terraform Changes (run only on main branch)
     - name: Terraform Apply
